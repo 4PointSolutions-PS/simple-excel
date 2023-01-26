@@ -55,14 +55,14 @@ public class PoiXlsx implements Xlsx {
 
 	public static Xlsx read(Path xlsxFile) throws XlsxException {
 		if (Files.notExists(xlsxFile)) {
-			throw new XlsxException("Form file '" + xlsxFile.toString() + "' does not exist!");
+			throw new XlsxException("Excel file '" + xlsxFile.toString() + "' does not exist!");
 		}
 		try {
 			return internalRead(Files.newInputStream(xlsxFile));
 		} catch (IOException ioe) {
 			throw new XlsxException("Excel file '" + xlsxFile.toString() + "' could not be read. " + ioe.getMessage(), ioe);
 		} catch (UnsupportedFileFormatException uffe) {
-			throw new XlsxException("Excel file  '" + xlsxFile.toString() + "' is not supported file format.");
+			throw new XlsxException("Excel file  '" + xlsxFile.toString() + "' is not supported file format.", uffe);
 		}
 	}
 

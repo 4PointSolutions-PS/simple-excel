@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.text.SimpleDateFormat;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -570,17 +571,7 @@ class PoiWorksheetRowTest {
 		}
 
 		@Override
-		public CellType getCellTypeEnum() {
-			throw new UnsupportedOperationException();
-		}
-
-		@Override
 		public CellType getCachedFormulaResultType() {
-			throw new UnsupportedOperationException();
-		}
-
-		@Override
-		public CellType getCachedFormulaResultTypeEnum() {
 			throw new UnsupportedOperationException();
 		}
 
@@ -721,6 +712,16 @@ class PoiWorksheetRowTest {
 
 		@Override
 		public boolean isPartOfArrayFormulaGroup() {
+			throw new UnsupportedOperationException();
+		}
+
+		@Override
+		public void setCellValue(LocalDateTime value) {
+			throw new UnsupportedOperationException();
+		}
+
+		@Override
+		public LocalDateTime getLocalDateTimeCellValue() {
 			throw new UnsupportedOperationException();
 		}
 		
