@@ -26,8 +26,8 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>GitHub 4PointSolutions-PS Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/4PointSolutions-PS/simple-excel</url>
+			<name>GitHub 4PointSolutions Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/4PointSolutions/simple-excel</url>
 		</repository>
 	</distributionManagement>
 
