@@ -23,7 +23,7 @@ class PoiXlsxTest {
 	private static final Path RESOURCES_DIR = Path.of("src", "test", "resources");
 	private static final Path ACTUAL_RESULTS_DIR = RESOURCES_DIR.resolve("actualResults");
 	
-	private static final Path SAMPLE_EXCEL_FILE = RESOURCES_DIR.resolve("sample.xslx");
+	private static final Path SAMPLE_EXCEL_FILE = RESOURCES_DIR.resolve("sample.xlsx");
 	private static final String MAIN_WORKSHEET_NAME = "Forms Information";
 	private static final String CHANNELS_WORKSHEET_NAME = "Effective_Expiry_Dates";
 
@@ -113,7 +113,7 @@ class PoiXlsxTest {
 		assertEquals(4, count);
 		
 		final Worksheet channelsSheet = poiXlsx.getSheet(CHANNELS_WORKSHEET_NAME).get();
-		final WorksheetRow channelRow = channelsSheet.getRow(2).get();
+		final WorksheetRow channelRow = channelsSheet.getRow(3).get();
 		Date value1 = channelRow.getColumnValueAsDate(5).get();
 		assertNotNull(value1);
 		
