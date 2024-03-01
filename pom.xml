@@ -12,8 +12,9 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- Project Dependencies -->
-		<apache-poi.version>5.2.5</apache-poi.version>
+		<apache-poi.version>5.2.5</apache-poi.version> <!-- reminder - remove the explicit commons-compress dependency when this gets updated. -->
 		<commons-collections4.version>4.4</commons-collections4.version>
+		<commons-compress.version>1.26.0</commons-compress.version>	<!-- Included to address CVE-2024-25710 and CVE-2024-26308 -->
 
 		<!-- Testing Dependencies -->
 		<junit.version>5.10.2</junit.version>
@@ -42,6 +43,12 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>${apache-poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.26.0</version>
+			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
